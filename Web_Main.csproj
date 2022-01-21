@@ -1,0 +1,451 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62F4D3C3-E6A9-4DAD-8522-0189CAF0259D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\Home.css" />
+    <Content Include="Default.Master" />
+    <Content Include="favicon.ico" />
+    <Content Include="Home.aspx" />
+    <Content Include="image.svg" />
+    <Content Include="Logo.png" />
+    <Content Include="Student\CSS\Default.css" />
+    <Content Include="Student\CSS\Details.css" />
+    <Content Include="Student\CSS\Payment.css" />
+    <Content Include="Student\CSS\Preference.css" />
+    <Content Include="Student\CSS\Register.css" />
+    <Content Include="Student\CSS\Search_University.css" />
+    <Content Include="Student\CSS\Services.css" />
+    <Content Include="Student\CSS\Verify.css" />
+    <Content Include="Student\Dashboard.aspx" />
+    <Content Include="Student\Details.aspx" />
+    <Content Include="Student\Payment.aspx" />
+    <Content Include="Student\Preference.aspx" />
+    <Content Include="Student\Register.aspx" />
+    <Content Include="Student\Search_University.aspx" />
+    <Content Include="Student\Services.aspx" />
+    <Content Include="Student\Verify.aspx" />
+    <Content Include="Student\_.Master" />
+    <Content Include="TPA\CSS\Default.css" />
+    <Content Include="TPA\CSS\Details.css" />
+    <Content Include="TPA\CSS\Payment.css" />
+    <Content Include="TPA\CSS\Preference.css" />
+    <Content Include="TPA\CSS\Request.css" />
+    <Content Include="TPA\CSS\rts.css" />
+    <Content Include="TPA\CSS\rtsHistory.css" />
+    <Content Include="TPA\CSS\rtsMenu.css" />
+    <Content Include="TPA\CSS\Search_University.css" />
+    <Content Include="TPA\CSS\Services.css" />
+    <Content Include="TPA\Dashboard.aspx" />
+    <Content Include="TPA\CSS\Master.css" />
+    <Content Include="TPA\Details.aspx" />
+    <Content Include="TPA\Payment.aspx" />
+    <Content Include="TPA\Preference.aspx" />
+    <Content Include="TPA\rts.aspx" />
+    <Content Include="TPA\rtsHistory.aspx" />
+    <Content Include="TPA\rtsMenu.aspx" />
+    <Content Include="TPA\Search_University.aspx" />
+    <Content Include="TPA\Services.aspx" />
+    <Content Include="University\Certificates.aspx" />
+    <Content Include="University\Certificates2.aspx" />
+    <Content Include="University\TPADetails.aspx" />
+    <Content Include="University\UploadedRecs.aspx" />
+    <Content Include="University\Cert_Preview.aspx" />
+    <Content Include="University\CSS\Certificates2.css" />
+    <Content Include="University\CSS\createuseraccount.css" />
+    <Content Include="University\CSS\Createuserrole.css" />
+    <Content Include="University\CSS\Dashboard.css" />
+    <Content Include="University\CSS\Default.css" />
+    <Content Include="University\CSS\EditUserAccount.css" />
+    <Content Include="University\CSS\EditUserRole.css" />
+    <Content Include="University\CSS\History.css" />
+    <Content Include="University\CSS\rts.css" />
+    <Content Include="University\CSS\rtsHistory.css" />
+    <Content Include="University\CSS\rtsMenu.css" />
+    <Content Include="University\CSS\rtsUpload.css" />
+    <Content Include="University\CSS\Student.css" />
+    <Content Include="University\CSS\StudentComplete.css" />
+    <Content Include="University\CSS\StudentDetails.css" />
+    <Content Include="University\CSS\StudentInProgress.css" />
+    <Content Include="University\CSS\UserRoles.css" />
+    <Content Include="University\CSS\UsersAccounts.css" />
+    <Content Include="University\CSS\Verifier.css" />
+    <Content Include="University\CSS\VerifierComplete.css" />
+    <Content Include="University\CSS\VerifierInProgress.css" />
+    <Content Include="University\CSS\WebForm4.css" />
+    <Content Include="University\Dashboard.aspx" />
+    <Content Include="University\details.aspx" />
+    <Content Include="University\history.aspx" />
+    <Content Include="University\rts.aspx" />
+    <Content Include="University\rtsHistory.aspx" />
+    <Content Include="University\rtsMenu.aspx" />
+    <Content Include="University\rtsUpload.aspx" />
+    <Content Include="University\SR_Submitted.aspx" />
+    <Content Include="University\StudentDetails.aspx" />
+    <Content Include="University\SR_Approved.aspx" />
+    <Content Include="University\userroles.aspx" />
+    <Content Include="University\verifier.aspx" />
+    <Content Include="University\verifierinprogress.aspx" />
+    <Content Include="University\WebForm4.aspx" />
+    <Content Include="University\_.Master" />
+    <Content Include="vs.png" />
+    <Content Include="vs2.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeFiles\BLL.cs" />
+    <Compile Include="CodeFiles\DAL.cs" />
+    <Compile Include="CodeFiles\Default.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\Default.Master.designer.cs">
+      <DependentUpon>Default.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\home.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\home.aspx.designer.cs">
+      <DependentUpon>home.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\State.cs" />
+    <Compile Include="CodeFiles\Strs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\CodeFiles\AutoCompleteStringCollection.cs" />
+    <Compile Include="Student\CodeFiles\Dashboard.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Details.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Payment.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Preference.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Preference.aspx.designer.cs">
+      <DependentUpon>Preference.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Register.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Search_University.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Search_University.aspx.designer.cs">
+      <DependentUpon>Search_University.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Services.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Verify.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\Verify.aspx.designer.cs">
+      <DependentUpon>Verify.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CodeFiles\_.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CodeFiles\_.Master.designer.cs">
+      <DependentUpon>_.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Dashboard.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Details.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Payment.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Preference.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Preference.aspx.designer.cs">
+      <DependentUpon>Preference.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rts.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rts.aspx.designer.cs">
+      <DependentUpon>rts.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rtsHistory.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rtsHistory.aspx.designer.cs">
+      <DependentUpon>rtsHistory.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rtsMenu.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\rtsMenu.aspx.designer.cs">
+      <DependentUpon>rtsMenu.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Search_University.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Search_University.aspx.designer.cs">
+      <DependentUpon>Search_University.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Services.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\_.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPA\CodeFiles\_.Master.designer.cs">
+      <DependentUpon>_.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\Certificates.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\Certificates.aspx.designer.cs">
+      <DependentUpon>Certificates.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\Certificates2.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\Certificates2.aspx.designer.cs">
+      <DependentUpon>Certificates2.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\TPADetails.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\TPADetails.aspx.designer.cs">
+      <DependentUpon>TPADetails.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\UploadedRecs.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\UploadedRecs.aspx.designer.cs">
+      <DependentUpon>UploadedRecs.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\Cert_Preview.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\Cert_Preview.aspx.designer.cs">
+      <DependentUpon>Cert_Preview.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\Dashboard.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\details.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\details.aspx.designer.cs">
+      <DependentUpon>details.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\history.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\history.aspx.designer.cs">
+      <DependentUpon>history.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\rts.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\rts.aspx.designer.cs">
+      <DependentUpon>rts.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsHistory.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsHistory.aspx.designer.cs">
+      <DependentUpon>rtsHistory.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsMenu.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsMenu.aspx.designer.cs">
+      <DependentUpon>rtsMenu.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsUpload.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\rtsUpload.aspx.designer.cs">
+      <DependentUpon>rtsUpload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\StudentRequests.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\StudentRequests.aspx.designer.cs">
+      <DependentUpon>StudentRequests.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\StudentDetails.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\StudentDetails.aspx.designer.cs">
+      <DependentUpon>StudentDetails.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\userroles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\userroles.aspx.designer.cs">
+      <DependentUpon>userroles.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\VerifierRequests.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\VerifierRequests.aspx.designer.cs">
+      <DependentUpon>VerifierRequests.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\WebForm4.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="University\CodeFiles\_.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University\CodeFiles\_.Master.designer.cs">
+      <DependentUpon>_.Master.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBCons.config" />
+    <None Include="packages.config" />
+    <Content Include="TPA\_.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49873</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
