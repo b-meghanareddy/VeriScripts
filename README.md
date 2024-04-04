@@ -1,2 +1,2 @@
 # VeriScripts
- My Internship Project
+ My Bachelor's Main Project
